@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UnityArc - Design & Development</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Poppins', 'sans-serif'],
+            },
+            colors: {
+              'brand-purple': '#6366F1',
+              'brand-purple-light': '#818CF8',
+              'dark-bg': '#111827',
+              'dark-card': '#1F2937',
+              'light-text': '#F3F4F6',
+              'medium-text': '#9CA3AF',
+            },
+            animation: {
+              'fade-in': 'fadeIn 1.5s ease-out 0.5s forwards',
+              'fade-in-fast': 'fadeIn 0.2s ease-out forwards',
+              'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+              'pulse-glow': 'pulseGlow 2.5s ease-in-out infinite',
+              'new-review-in': 'newReviewIn 0.5s ease-out forwards',
+              'review-out': 'reviewOut 0.5s ease-out forwards',
+              'bounce': 'bounce 1.5s infinite',
+            },
+            keyframes: {
+              fadeIn: {
+                'from': { opacity: '0' },
+                'to': { opacity: '1' },
+              },
+              fadeInUp: {
+                'from': { opacity: '0', transform: 'translateY(20px)' },
+                'to': { opacity: '1', transform: 'translateY(0)' },
+              },
+              pulseGlow: {
+                '0%, 100%': { transform: 'scale(1)', boxShadow: '0 0 0 0 rgba(99, 102, 241, 0.7)' },
+                '50%': { transform: 'scale(1.05)', boxShadow: '0 0 20px 10px rgba(99, 102, 241, 0)' },
+              },
+              newReviewIn: {
+                'from': { opacity: '0', transform: 'translateY(-20px) scale(0.98)' },
+                'to': { opacity: '1', transform: 'translateY(0) scale(1)' },
+              },
+              reviewOut: {
+                'from': { opacity: '1', transform: 'scale(1)' },
+                'to': { opacity: '0', transform: 'scale(0.95)' },
+              },
+               bounce: {
+                '0%, 100%': {
+                  transform: 'translateY(-15%)',
+                  animationTimingFunction: 'cubic-bezier(0.8, 0, 1, 1)',
+                },
+                '50%': {
+                  transform: 'translateY(0)',
+                  animationTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)',
+                },
+              },
+            },
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
